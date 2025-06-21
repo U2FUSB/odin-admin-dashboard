@@ -3,9 +3,7 @@
 
 
 # todoList
-- html content  for parent elements and basic grid layout
-- final html structure
-- complete grid layout (and dummy content) for
+- complete grid layout for
   - sidebar
   - header 
   - main content
