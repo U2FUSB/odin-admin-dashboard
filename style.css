@@ -90,11 +90,24 @@ aside {
     gap: 2.5rem;
     padding: 1rem;
 }
+aside h1,
+aside div {
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: center;
+    justify-items: left;
+    gap: 1rem;
+    padding: 0.5rem 0;
+}
 main {
     grid-area: main;
 }
 img.icon {
     height: 30px;
+    width: auto;
+}
+aside > h1 img.icon {
+    height: 50px;
     width: auto;
 }
 img.profile-picture {
