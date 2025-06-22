@@ -32,6 +32,7 @@ header {
     padding: 1rem 3rem;
     align-items: end;
     box-shadow: -1px 5px 13px -3px rgba(0, 0, 0, 0.71);
+    row-gap: 1rem;
 }
 header .searchbar {
     display: grid;
@@ -39,6 +40,10 @@ header .searchbar {
     grid-template-rows: min-content;
     gap: 1rem;
     align-content: center;
+    align-self: center;
+}
+header .whatever-this-is {
+    align-self: center;
 }
 header .searchbar input[type="search"] {
     border-radius: 1rem;
@@ -118,11 +123,33 @@ main section article {
     padding: 2rem;
     box-shadow: 4px 5px 16px -4px rgba(0, 0, 0, 0.71);
 }
+main section.projects article {
+    border-left: orange solid 0.75rem;
+}
 section.projects {
     grid-area: projects;
 }
+section.projects .project-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+.project-cards .card {
+    display: grid;
+    grid-template-rows: min-content min-content auto;
+    align-items: end;
+}
+.project-cards .icons {
+    display: flex;
+    gap: 2rem;
+    justify-content: end;
+}
 section.announcements {
     grid-area: announcements;
+}
+section.announcements hr {
+    margin: 1rem 0;
 }
 section.trending {
     grid-area: trending;
