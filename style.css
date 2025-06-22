@@ -104,9 +104,10 @@ main {
     grid-area: main;
     height: 80vh;
     display: grid;
-    grid-template-areas: 
-    "projects announcements"
-    "projects trending";
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        "projects announcements"
+        "projects trending";
 }
 section.projects {
     grid-area: projects;
@@ -127,13 +128,13 @@ aside > h1 img.icon {
     width: auto;
 }
 img.profile-picture {
-    --profile-picture-size: 4rem;
+    --profile-picture-size: 2.5rem;
     height: var(--profile-picture-size);
     width: var(--profile-picture-size);
     border-radius: 100%;
 }
-header > .whatever-this-is img.profile-picture {
-    --profile-picture-size: 40px;
+header > .profile img.profile-picture {
+    --profile-picture-size: 4rem;
     height: var(--profile-picture-size);
     width: var(--profile-picture-size);
 }
