@@ -112,10 +112,12 @@ main {
     height: 80vh;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: min-content min-content;
     grid-template-areas:
         "projects announcements"
         "projects trending";
     gap: 1rem;
+    align-items: top;
 }
 main section article {
     background-color: white;
@@ -154,7 +156,12 @@ section.announcements hr {
 section.trending {
     grid-area: trending;
 }
-
+section.trending article.trending-card {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    align-items: center;
+    gap: 1rem;
+}
 img.icon {
     height: 30px;
     width: auto;
