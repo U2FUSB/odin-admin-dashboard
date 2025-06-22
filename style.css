@@ -9,8 +9,10 @@
     --main-grey: rgb(218, 217, 217);
     --main-blue: rgb(0, 140, 200);
 }
+html {
+    height: auto;
+}
 body {
-    height: 100vh;
     background: #c2c2c2;
     background: linear-gradient(
         137deg,
@@ -22,6 +24,7 @@ body {
     grid-template-areas:
         "aside header"
         "aside main";
+    grid-template-rows: min-content auto;
 }
 header {
     grid-area: header;
@@ -42,8 +45,14 @@ header .searchbar {
     align-content: center;
     align-self: center;
 }
+header .searchbar label {
+    display: flex;
+    align-items: center;
+}
 header .whatever-this-is {
     align-self: center;
+    font-size: larger;
+    font-weight: bold;
 }
 header .searchbar input[type="search"] {
     border-radius: 1rem;
@@ -83,12 +92,17 @@ header .profile a:has(img.profile-picture) {
 }
 header .profile .greeting {
     align-self: end;
+    font-weight: bold;
+    font-size: smaller;
 }
 header .profile .profile-name {
     align-self: start;
+    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 aside {
+    height: 100%;
     grid-area: aside;
     background-color: var(--main-blue);
     color: white;
@@ -96,6 +110,7 @@ aside {
     flex-direction: column;
     gap: 2.5rem;
     padding: 1rem;
+    font-size: large;
 }
 aside h1,
 aside div {
@@ -104,12 +119,16 @@ aside div {
     align-items: center;
     justify-items: left;
     gap: 1rem;
-    padding: 0.5rem 0;
+    padding: 0.7rem 0;
+}
+aside div {
+    font-size: 1.6rem;
+    font-weight: bold;
 }
 main {
+    height: 80vh;
     grid-area: main;
     padding: 2rem 1rem;
-    height: 80vh;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: min-content min-content;
@@ -118,6 +137,10 @@ main {
         "projects trending";
     gap: 1rem;
     align-items: top;
+}
+main h2 {
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 main section article {
     background-color: white;
@@ -142,6 +165,9 @@ section.projects .project-cards {
     grid-template-rows: min-content min-content auto;
     align-items: end;
 }
+.project-cards .card p {
+    color: grey;
+}
 .project-cards .icons {
     display: flex;
     gap: 2rem;
@@ -149,6 +175,13 @@ section.projects .project-cards {
 }
 section.announcements {
     grid-area: announcements;
+}
+section.announcements h3 {
+    font-size: 1rem;
+}
+section.announcements p {
+    color: grey;
+    font-size: 0.8rem;
 }
 section.announcements hr {
     margin: 1rem 0;
@@ -162,8 +195,15 @@ section.trending article.trending-card {
     align-items: center;
     gap: 1rem;
 }
+section.trending .tag {
+    font-size: 0.9rem;
+}
+section.trending p {
+    color: grey;
+    font-size: 0.75rem;
+}
 img.icon {
-    height: 30px;
+    height: 25px;
     width: auto;
 }
 aside > h1 img.icon {
