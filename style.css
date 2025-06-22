@@ -28,8 +28,9 @@ header {
     background-color: white;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 4rem min-content;
+    grid-template-rows: 4rem auto;
     padding: 1rem 3rem;
+    align-items: end;
 }
 header .searchbar {
     display: grid;
@@ -101,7 +102,22 @@ aside div {
 }
 main {
     grid-area: main;
+    height: 80vh;
+    display: grid;
+    grid-template-areas: 
+    "projects announcements"
+    "projects trending";
 }
+section.projects {
+    grid-area: projects;
+}
+section.announcements {
+    grid-area: announcements;
+}
+section.trending {
+    grid-area: trending;
+}
+
 img.icon {
     height: 30px;
     width: auto;
